@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
-    "build": "vue-tsc -b && vite build",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "vue-tsc -b",
-    "lint": "vue-tsc -b"
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@fbp/shared": "workspace:*",
