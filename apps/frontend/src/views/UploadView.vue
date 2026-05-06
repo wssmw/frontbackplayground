@@ -40,10 +40,16 @@ async function uploadFile(options: UploadRequestOptions) {
           <div class="el-upload__tip">当前示例上传到后端内存处理，不落库。</div>
         </template>
       </el-upload>
-      <el-alert class="mt-4" type="info" show-icon :closable="false" title="重点观察 multipart/form-data 请求体和后端文件元信息解析。" />
+      <el-alert
+        class="mt-4"
+        type="info"
+        show-icon
+        :closable="false"
+        title="重点观察 multipart/form-data 请求体和后端文件元信息解析。"
+      />
     </el-card>
 
-    <el-card shadow="never" class="rounded-3xl" v-loading="loading">
+    <el-card v-loading="loading" shadow="never" class="rounded-3xl">
       <template #header><div class="font-bold">响应结果</div></template>
       <pre class="code-panel">{{ result }}</pre>
     </el-card>

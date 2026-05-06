@@ -31,10 +31,18 @@ async function runRequest(type: 'health' | 'get' | 'post') {
         <div class="font-bold">基础请求实验</div>
       </template>
       <div class="space-y-4">
-        <p class="leading-7 text-slate-600">点击按钮观察不同请求方式下，后端如何接收参数并返回统一响应。</p>
-        <el-button class="w-full" type="primary" :loading="loading" @click="runRequest('health')">GET /health</el-button>
-        <el-button class="w-full" :loading="loading" @click="runRequest('get')">GET /basic/echo?keyword=...</el-button>
-        <el-button class="w-full" type="success" :loading="loading" @click="runRequest('post')">POST /basic/echo</el-button>
+        <p class="leading-7 text-slate-600">
+          点击按钮观察不同请求方式下，后端如何接收参数并返回统一响应。
+        </p>
+        <el-button class="w-full" type="primary" :loading="loading" @click="runRequest('health')"
+          >GET /health</el-button
+        >
+        <el-button class="w-full" :loading="loading" @click="runRequest('get')"
+          >GET /basic/echo?keyword=...</el-button
+        >
+        <el-button class="w-full" type="success" :loading="loading" @click="runRequest('post')"
+          >POST /basic/echo</el-button
+        >
       </div>
     </el-card>
 

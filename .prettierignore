@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+**/.vitepress/cache/**
+**/.vitepress/dist/**
+pnpm-lock.yaml
+*.tsbuildinfo
+*.vue.js

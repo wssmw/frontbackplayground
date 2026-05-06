@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <script setup lang="ts">
 const navs = [
   { path: '/', label: '首页' },
@@ -11,7 +13,9 @@ const navs = [
   <div class="min-h-screen bg-slate-100">
     <header class="sticky top-0 z-10 border-b border-slate-200 bg-white/85 backdrop-blur">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <RouterLink to="/" class="text-lg font-bold text-brand-900">FrontBack Playground</RouterLink>
+        <RouterLink to="/" class="text-lg font-bold text-brand-900"
+          >FrontBack Playground</RouterLink
+        >
         <nav class="flex gap-2">
           <RouterLink
             v-for="nav in navs"

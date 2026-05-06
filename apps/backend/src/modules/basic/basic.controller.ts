@@ -16,7 +16,10 @@ export class BasicController {
 
   @Get('basic/echo')
   @ApiOperation({ summary: '回显 Query 参数' })
-  getEcho(@Query() query: Record<string, unknown>, @Headers() headers: Record<string, unknown>): BasicEchoResult {
+  getEcho(
+    @Query() query: Record<string, unknown>,
+    @Headers() headers: Record<string, unknown>,
+  ): BasicEchoResult {
     return {
       method: 'GET',
       query,
@@ -29,7 +32,10 @@ export class BasicController {
 
   @Get('basic/echo/:id')
   @ApiOperation({ summary: '回显路径参数和 Query 参数' })
-  getEchoById(@Param() params: Record<string, string>, @Query() query: Record<string, unknown>): BasicEchoResult {
+  getEchoById(
+    @Param() params: Record<string, string>,
+    @Query() query: Record<string, unknown>,
+  ): BasicEchoResult {
     return {
       method: 'GET',
       params,
