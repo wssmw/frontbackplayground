@@ -3,6 +3,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthController } from './modules/auth/auth.controller';
 import { BasicController } from './modules/basic/basic.controller';
 import { UploadController } from './modules/upload/upload.controller';
+import { SSEController } from './modules/sse/sse.controller';
 
 @Module({
   imports: [
@@ -12,6 +13,6 @@ import { UploadController } from './modules/upload/upload.controller';
       signOptions: { expiresIn: '2h' },
     }),
   ],
-  controllers: [BasicController, AuthController, UploadController],
+  controllers: [BasicController, AuthController, UploadController, SSEController],
 })
 export class AppModule {}
