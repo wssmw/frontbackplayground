@@ -9,6 +9,7 @@ export default defineConfig({
       { text: 'HTTP', link: '/http/get-post' },
       { text: '鉴权', link: '/auth/login-flow' },
       { text: '上传', link: '/upload/upload-file' },
+      { text: '实时通信', link: '/realtime/sse' },
     ],
     sidebar: [
       {
@@ -34,6 +35,13 @@ export default defineConfig({
       {
         text: '文件处理',
         items: [{ text: '文件上传', link: '/upload/upload-file' }],
+      },
+      {
+        text: '实时通信',
+        items: [
+          { text: 'WebSocket', link: '/realtime/websocket' },
+          { text: 'Server-Sent Events', link: '/realtime/sse' },
+        ],
       },
     ],
     socialLinks: [],

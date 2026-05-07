@@ -51,10 +51,12 @@ async function fetchProfile() {
         <el-button type="primary" class="w-full" :loading="loading" @click="handleLogin"
           >登录并保存 Token</el-button
         >
-        <el-button class="mt-3 w-full" :loading="loading" @click="fetchProfile"
+        <el-button class="mt-3 !ml-0 w-full" :loading="loading" @click="fetchProfile"
           >请求受保护接口</el-button
         >
-        <el-button class="mt-3 w-full" type="danger" plain @click="auth.logout">退出登录</el-button>
+        <el-button class="mt-3 !ml-0 w-full" type="danger" plain @click="auth.logout"
+          >退出登录</el-button
+        >
       </el-form>
     </el-card>
 

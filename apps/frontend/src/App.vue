@@ -20,6 +20,10 @@ const visibleNavs = computed(() => navs.slice(0, MAX_VISIBLE_NAVS));
 const hiddenNavs = computed(() => navs.slice(MAX_VISIBLE_NAVS));
 const hasHiddenNavs = computed(() => hiddenNavs.value.length > 0);
 const isHiddenNavActive = computed(() => hiddenNavs.value.some((nav) => nav.path === route.path));
+
+function openDocs() {
+  window.open('http://localhost:5174', '_blank');
+}
 </script>
 
 <template>
@@ -75,6 +79,7 @@ const isHiddenNavActive = computed(() => hiddenNavs.value.some((nav) => nav.path
               </el-dropdown-menu>
             </template>
           </el-dropdown>
+          <el-button class="!ml-0" type="primary" plain round @click="openDocs">打开文档</el-button>
         </nav>
       </div>
     </header>

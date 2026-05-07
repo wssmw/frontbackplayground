@@ -37,10 +37,14 @@ async function runRequest(type: 'health' | 'get' | 'post') {
         <el-button class="w-full" type="primary" :loading="loading" @click="runRequest('health')"
           >GET /health</el-button
         >
-        <el-button class="w-full" :loading="loading" @click="runRequest('get')"
+        <el-button class="w-full !ml-0" :loading="loading" @click="runRequest('get')"
           >GET /basic/echo?keyword=...</el-button
         >
-        <el-button class="w-full" type="success" :loading="loading" @click="runRequest('post')"
+        <el-button
+          class="w-full !ml-0"
+          type="success"
+          :loading="loading"
+          @click="runRequest('post')"
           >POST /basic/echo</el-button
         >
       </div>

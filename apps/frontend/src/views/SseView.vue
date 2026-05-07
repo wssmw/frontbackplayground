@@ -5,6 +5,7 @@ import hljs from 'highlight.js';
 import DOMPurify from 'dompurify';
 import type { StreamPayload } from '@fbp/shared';
 import 'highlight.js/styles/github-dark.css';
+import { ElMessageBox } from 'element-plus';
 
 type SseEvent = {
   event?: string;
@@ -164,38 +165,34 @@ async function runRequest(type: RequestType) {
         <el-button
           class="w-full"
           type="primary"
-          :loading="loading && activeType === 'basic'"
-          :disabled="loading && activeType !== 'basic'"
+          :loading="loading"
+          :disabled="loading"
           @click="runRequest('basic')"
           >基础Sse</el-button
         >
         <el-button
           class="w-full !ml-0"
           type="success"
-          :loading="loading && activeType === 'code'"
-          :disabled="loading && activeType !== 'code'"
+          :loading="loading"
+          :disabled="loading"
           @click="runRequest('code')"
           >代码内容Sse</el-button
         >
         <el-button
           class="w-full !ml-0"
           type="warning"
-          :loading="loading && activeType === 'rich'"
-          :disabled="loading && activeType !== 'rich'"
+          :loading="loading"
+          :disabled="loading"
           @click="runRequest('rich')"
           >丰富内容Sse</el-button
         >
         <el-button
           class="w-full !ml-0"
           type="warning"
-          :loading="loading && activeType === 'rich'"
-          :disabled="loading && activeType !== 'rich'"
-          @click="
-            () => {
-              console.log(result);
-            }
-          "
-          >展示
+          :loading="loading"
+          :disabled="loading"
+          @click="() => ElMessageBox.alert(result, '提示')"
+          >展示数据
         </el-button>
       </div>
     </el-card>
