@@ -11,6 +11,7 @@ const router = createRouter({
     { path: '/basic', name: 'basic', component: BasicRequestView },
     { path: '/auth', name: 'auth', component: AuthView },
     { path: '/upload', name: 'upload', component: UploadView },
+    { path: '/Sse', name: 'Sse', component: () => import('@/views/SseView.vue') },
   ],
 });
 

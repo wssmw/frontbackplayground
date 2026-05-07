@@ -11,6 +11,7 @@ const navs = [
   { path: '/basic', label: '基础请求' },
   { path: '/auth', label: '登录鉴权' },
   { path: '/upload', label: '文件上传' },
+  { path: '/Sse', label: 'Sse' },
 ];
 
 const route = useRoute();

@@ -20,6 +20,12 @@ const cards = [
     path: '/upload',
     icon: UploadFilled,
   },
+  {
+    title: 'Sse下载',
+    desc: '学习 Sse请求、md文档展示。',
+    path: '/Sse',
+    icon: Connection,
+  },
 ];
 
 function openDocs() {

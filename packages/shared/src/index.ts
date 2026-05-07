@@ -44,3 +44,13 @@ export interface BasicEchoResult {
 }
 
 export const API_SUCCESS_CODE = 0;
+
+export interface StreamPayload {
+  type: 'connected' | 'thinking' | 'delta' | 'reference' | 'recommended' | 'usage' | 'complete';
+  content?: string;
+  requestId?: string;
+  index?: number;
+  elapsedMs?: number;
+  tokens?: number;
+  references?: Array<{ title: string; url: string }>;
+}
