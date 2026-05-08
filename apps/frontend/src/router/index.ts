@@ -12,6 +12,7 @@ const router = createRouter({
     { path: '/auth', name: 'auth', component: AuthView },
     { path: '/upload', name: 'upload', component: UploadView },
     { path: '/Sse', name: 'Sse', component: () => import('@/views/SseView.vue') },
+    { path: '/rag', name: 'rag', component: () => import('@/views/RagView.vue') },
   ],
 });
 

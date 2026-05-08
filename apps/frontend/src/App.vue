@@ -12,6 +12,7 @@ const navs = [
   { path: '/auth', label: '登录鉴权' },
   { path: '/upload', label: '文件上传' },
   { path: '/Sse', label: 'Sse' },
+  { path: '/rag', label: 'Rag' },
 ];
 
 const route = useRoute();
@@ -20,10 +21,6 @@ const visibleNavs = computed(() => navs.slice(0, MAX_VISIBLE_NAVS));
 const hiddenNavs = computed(() => navs.slice(MAX_VISIBLE_NAVS));
 const hasHiddenNavs = computed(() => hiddenNavs.value.length > 0);
 const isHiddenNavActive = computed(() => hiddenNavs.value.some((nav) => nav.path === route.path));
-
-function openDocs() {
-  window.open('http://localhost:5174', '_blank');
-}
 </script>
 
 <template>

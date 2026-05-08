@@ -41,6 +41,7 @@ export default defineConfig({
         items: [
           { text: 'WebSocket', link: '/realtime/websocket' },
           { text: 'Server-Sent Events', link: '/realtime/sse' },
+          { text: 'RAG 向量搜索', link: '/realtime/rag' },
         ],
       },
     ],

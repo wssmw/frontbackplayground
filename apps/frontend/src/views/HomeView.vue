@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Connection, Key, UploadFilled } from '@element-plus/icons-vue';
+import { Connection, Key, UploadFilled, Search } from '@element-plus/icons-vue';
 
 const cards = [
   {
@@ -25,6 +25,12 @@ const cards = [
     desc: '学习 Sse请求、md文档展示。',
     path: '/Sse',
     icon: Connection,
+  },
+  {
+    title: 'RAG 向量搜索',
+    desc: '学习文本向量化、语义搜索和相似度检索。',
+    path: '/rag',
+    icon: Search,
   },
 ];
 

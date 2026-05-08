@@ -41,3 +41,25 @@ export function login(data: LoginRequest) {
 export function getProfile() {
   return http.get<unknown, ApiResponse<LoginResult['user']>>('/auth/profile');
 }
+
+export function upsertRagText(data: {
+  id?: string;
+  text: string;
+  metadata?: Record<string, unknown>;
+}) {
+  return http.post<unknown, ApiResponse<{ id: string }>>('/rag/upsert', data);
+}
+
+export function searchRagText(data: { query: string; limit?: number }) {
+  return http.post<
+    unknown,
+    ApiResponse<
+      Array<{
+        id: string;
+        score: number;
+        text: string;
+        metadata?: Record<string, unknown>;
+      }>
+    >
+  >('/rag/search', data);
+}
