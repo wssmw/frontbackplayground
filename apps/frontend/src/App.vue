@@ -14,6 +14,7 @@ const navs = [
   { path: '/Sse', label: 'SSE' },
   { path: '/rag', label: 'RAG' },
   { path: '/qiankun', label: 'Qiankun' },
+  { path: '/wujie', label: 'Wujie' },
 ];
 
 const route = useRoute();
