@@ -13,6 +13,7 @@ const router = createRouter({
     { path: '/upload', name: 'upload', component: UploadView },
     { path: '/Sse', name: 'Sse', component: () => import('@/views/SseView.vue') },
     { path: '/rag', name: 'rag', component: () => import('@/views/RagView.vue') },
+    { path: '/qiankun', name: 'qiankun', component: () => import('@/views/qiankun/index.vue') },
   ],
 });
 
